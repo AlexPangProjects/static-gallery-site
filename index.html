@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APGallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="topNav">
+            <div class="navbar">
+                <a href="index.html" class="navBox" id="logo"><img src="image.jpg" id="logoimg"></a>
+                <a href="index.html" class="navBox">Home</a>
+                <a href="#album1" class="navBox">Album 1</a>
+                <a href="#album2" class="navBox">Album 2</a>
+                <a href="#album2" class="navBox">Contact</a>
+            </div>
+        </div>
+
+        <div class="content-container">
+            <p id="intro">Welcome, to my gallery.</p>
+
+            <div class="sliderContainer">
+                <div class="sliderImg fade">
+                    <img src="scene1.jpg">
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                    <div class="captionText">Album: Scenery</div>
+                </div>
+                <div class="sliderImg fade">
+                    <img src="scene2.jpg">
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                    <div class="captionText">Album: Scenery</div>
+                </div>
+                <div class="sliderImg fade">
+                    <img src="scene3.jpg">
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                    <div class="captionText">Album: Scenery</div>
+                </div>
+                <div class="sliderImg fade">
+                    <img src="scene4.jpg">
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                    <div class="captionText">Album: Scenery</div>
+                </div>
+            </div>  
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+
+            <div class="gallery">
+                <img src="gal1.jpg" class = "square">
+                <img src="gal2.jpg" class = "square">
+                <img src="gal3.jpg" class = "square">
+                <img src="gal4.jpg" class = "square">
+                <img src="gal5.jpg" class = "square">
+                <img src="gal6.jpg" class = "square">
+            </div>
+        </div>
+
+        <footer>
+            <a href="https://github.com/AlexPangProjects"><img class='footlogo' src="github.png"></a><a href="https://www.linkedin.com/in/alex-pang-4524b5289/"><img class='footlogo' src="linkedin.png"></a>
+        </footer>
+        <script src="app.js"></script>
+    </div>
+</body>
+</html>
