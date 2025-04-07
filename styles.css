@@ -119,6 +119,7 @@ footer {
     display: block;
     margin: 0 auto;
     object-fit: cover;
+    cursor: pointer;
 }
 
 .prev, .next {
@@ -223,10 +224,88 @@ footer {
 
 .square:hover {
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 .square:hover .captionText {
     opacity: 1;
     background-color: rgba(0,0,0,0.8);
     transition-delay: 0.2s;
+}
+
+.container1 {
+    position: relative;
+    display: none;
+}
+   
+  /* Closable button inside the image */
+.closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-height: 80%;
+    max-width: 90%;
+  }
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+
+.nextModal{
+    right: 0; /* Align to right edge of image */
+    border-radius: 3px 0 0 3px;
+}
+
+.prevModal {
+    left: 0; /* Align to left edge of image */
+}
+
+.prevModal, .nextModal {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.prevModal:hover , .nextModal:hover {
+    background-color: rgba(0,0,0,0.8);
+
+
 }

@@ -22,26 +22,26 @@
             <p id="intro">Welcome, to my gallery.</p>
 
             <div class="sliderContainer">
-                <div class="sliderImg fade">
-                    <img src="scene1.jpg">
+                <div class="sliderImg fade modal1">
+                    <img src="scene1.jpg" onclick="myFunction(this)">
                     <a class="prev" onclick="plusSlides(-1)">❮</a>
                     <a class="next" onclick="plusSlides(1)">❯</a>
                     <div class="captionText">Album: Scenery</div>
                 </div>
-                <div class="sliderImg fade">
-                    <img src="scene2.jpg">
+                <div class="sliderImg fade modal1">
+                    <img src="scene2.jpg" onclick="myFunction(this)">
                     <a class="prev" onclick="plusSlides(-1)">❮</a>
                     <a class="next" onclick="plusSlides(1)">❯</a>
                     <div class="captionText">Album: Scenery</div>
                 </div>
-                <div class="sliderImg fade">
-                    <img src="scene3.jpg">
+                <div class="sliderImg fade modal1">
+                    <img src="scene3.jpg" onclick="myFunction(this)">
                     <a class="prev" onclick="plusSlides(-1)">❮</a>
                     <a class="next" onclick="plusSlides(1)">❯</a>
                     <div class="captionText">Album: Scenery</div>
                 </div>
-                <div class="sliderImg fade">
-                    <img src="scene4.jpg">
+                <div class="sliderImg fade modal1">
+                    <img src="scene4.jpg" onclick="myFunction(this)">
                     <a class="prev" onclick="plusSlides(-1)">❮</a>
                     <a class="next" onclick="plusSlides(1)">❯</a>
                     <div class="captionText">Album: Scenery</div>
@@ -57,43 +57,57 @@
 
             <div class="gallery">
                 <div class="image_container">
-                    <div class="square">
-                        <img src="gal1.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="square modal2">
+                        <img src="gal1.jpg" onclick="myFunction(this);">
+                        <div class="captionText">Album: Cars</div>
+                    </div>
+                </div>
+                <div class="image_container">
+                    <div class="square modal2">
+                        <img src="gal2.jpg" onclick="myFunction(this);">
                         <div class="captionText">Album: Scenery</div>
                     </div>
                 </div>
                 <div class="image_container">
-                    <div class="square">
-                        <img src="gal2.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="square modal2">
+                        <img src="gal3.jpg" onclick="myFunction(this);">
                         <div class="captionText">Album: Scenery</div>
                     </div>
                 </div>
                 <div class="image_container">
-                    <div class="square">
-                        <img src="gal3.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="square modal2">
+                        <img src="gal4.jpg" onclick="myFunction(this);">
                         <div class="captionText">Album: Scenery</div>
                     </div>
                 </div>
                 <div class="image_container">
-                    <div class="square">
-                        <img src="gal4.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <div class="captionText">Album: Scenery</div>
+                    <div class="square modal2">
+                        <img src="gal5.jpg" onclick="myFunction(this);">
+                        <div class="captionText">Album: Cars</div>
                     </div>
                 </div>
                 <div class="image_container">
-                    <div class="square">
-                        <img src="gal5.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <div class="captionText">Album: Scenery</div>
-                    </div>
-                </div>
-                <div class="image_container">
-                    <div class="square">
-                        <img src="gal6.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                        <div class="captionText">Album: Scenery</div>
+                    <div class="square modal2">
+                        <img src="gal6.jpg" onclick="myFunction(this);">
+                        <div class="captionText">Album: Cars</div>
                     </div>
                 </div>
             </div>
         
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Close the image -->
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+                <a class="prevModal" onclick="plusModal(-1)">❮</a>
+                <a class="nextModal" onclick="plusModal(1)">❯</a>
+            
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content " id="expandedImg">
+
+            </div>
+
         </div>
 
         <footer>
