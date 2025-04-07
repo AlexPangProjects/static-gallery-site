@@ -45,18 +45,24 @@ function showSlides(n) {
   }
 
 
-  function myFunction(imgs) {
-    // Get the expanded image
-    var expandImg = document.getElementById("expandedImg");
-    // Use the same src in the expanded image as the image being clicked on from the grid
-    expandImg.src = imgs.src
-    // Show the container element (hidden with CSS)
-    expandImg.parentElement.style.display = "block";
-  }
-
-  let modalIndex = 1;
-  showModal(modalIndex); // Changed from modalSlider to showModal for consistency
   
+  
+  function myFunction(imgs) {
+      var expandImg = document.getElementById("expandedImg");
+      let classes = imgs.parentElement.classList; // Get classes from the parent (sliderImg or square)
+      let imgClass = classes.contains("modal1") ? "modal1" : "modal2"; // Determine if from slider or gallery
+  
+      // Set the source and store the type
+      expandImg.src = imgs.src;
+      currentModalType = imgClass; // Store for use in showModal
+  
+      // Show the modal
+      expandImg.parentElement.style.display = "block";
+  }
+  
+  let modalIndex = 1;
+  let currentModalType = "modal1"; // Default to slider images
+
   function plusModal(n) {
       showModal(modalIndex += n);
   }
@@ -66,10 +72,20 @@ function showSlides(n) {
   }
   
   function showModal(n) {
-      let slides = document.querySelectorAll(".sliderImg img");
-      if (n > slides.length) {modalIndex = 1} // Loop to start
-      if (n < 1) {modalIndex = slides.length} // Loop to end
       let modalImg = document.getElementById("expandedImg");
-      modalImg.src = slides[modalIndex-1].src; // Set modal image to current slide
+  
+      // Select slides based on currentModalType
+      let slides;
+      if (currentModalType === "modal1") {
+          slides = document.querySelectorAll(".modal1 img"); // Slider images
+      } else {
+          slides = document.querySelectorAll(".modal2 img"); // Gallery images
+      }
+  
+      if (n > slides.length) { modalIndex = 1 } // Loop to start
+      if (n < 1) { modalIndex = slides.length } // Loop to end
+  
+  
+      modalImg.src = slides[modalIndex-1].src; // Set modal image
       modalImg.parentElement.style.display = "block"; // Show modal
   }
