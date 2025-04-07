@@ -118,6 +118,7 @@ footer {
     height: 500px;
     display: block;
     margin: 0 auto;
+    object-fit: cover;
 }
 
 .prev, .next {
@@ -196,15 +197,36 @@ footer {
     padding: 30px;
 }
 
+.image_container {
+    width: 360px;
+    height: 360px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .square {
     width: 300px;
     height: 300px;
-    transition: transform 0.2s ease-in-out; /* Smooth animation */
-    padding: 30px;
+    position: relative; /* Positioning context for caption */
+    overflow: hidden; /* Ensure caption stays within bounds */
+    transition: transform 0.2s ease-in-out;
+}
+
+.square img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
 .square:hover {
-    transform: scale(1.1); /* Grows to 360px if original is 300px */
-    z-index: 2; /* Appear on top if overlapping */
+    transform: scale(1.1);
+}
+
+.square:hover .captionText {
+    opacity: 1;
+    background-color: rgba(0,0,0,0.8);
+    transition-delay: 0.2s;
 }

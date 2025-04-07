@@ -15,6 +15,21 @@ const loopSlideshow = setInterval(() => {
     plusSlides(1); // Move to the next slide
 }, 6000);
 
+
+let galIndex = 1;
+showSlides(galIndex);
+
+
+function plusGal(n) {
+  showSlides(galIndex += n);
+}
+
+function currentGal(n) {
+  showSlides(galIndex = n);
+} 
+
+
+
 function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("sliderImg");
