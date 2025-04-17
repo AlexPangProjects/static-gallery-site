@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APGallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="topNav">
+            <div class="navbar">
+                <a href="index.html" class="navBox" id="logo"><img src="image.png" id="logoimg"></a>
+                <a href="index.html" class="navBox">Home</a>
+                <a href="cars.html" class="navBox">Cars</a>
+                <a href="scenery.html" class="navBox">Scenery</a>
+                <a href="#album2" class="navBox">Contact</a>
+            </div>
+        </div>
+
+        <div class="content-container">
+            <p id="intro">Album: Scenery</p>
+
+            <div class="gallery">
+                <div class="image_container">
+                    <div class="square modal2">
+                        <img src="s1.jpg" onclick="myFunction(this);">
+                        <div class="captionText">Album: Cars</div>
+                    </div>
+                </div>
+                <div class="image_container">
+                    <div class="square modal2">
+                        <img src="s2.jpg" onclick="myFunction(this);">
+                        <div class="captionText">Album: Cars</div>
+                    </div>
+                </div>
+                <div class="image_container">
+                    <div class="square modal2">
+                        <img src="s3.jpg" onclick="myFunction(this);">
+                        <div class="captionText">Album: Scenery</div>
+                    </div>
+                </div>
+                <div class="image_container">
+                    <div class="square modal2">
+                        <img src="s4.jpg" onclick="myFunction(this);">
+                        <div class="captionText">Album: Scenery</div>
+                    </div>
+                </div>
+                <div class="image_container">
+                    <div class="square modal2">
+                        <img src="s5.jpg" onclick="myFunction(this);">
+                        <div class="captionText">Album: Scenery</div>
+                    </div>
+                </div>
+                <div class="image_container">
+                    <div class="square modal2">
+                        <img src="s6.jpg" onclick="myFunction(this);">
+                        <div class="captionText">Album: Cars</div>
+                    </div>
+                </div>
+                <div class="image_container">
+                    <div class="square modal2">
+                        <img src="s7.jpg" onclick="myFunction(this);">
+                        <div class="captionText">Album: Cars</div>
+                    </div>
+                </div>
+                <div class="image_container">
+                    <div class="square modal2">
+                        <img src="s8.jpg" onclick="myFunction(this);">
+                        <div class="captionText">Album: Cars</div>
+                    </div>
+                </div>
+                <div class="image_container">
+                    <div class="square modal2">
+                        <img src="s9.jpg" onclick="myFunction(this);">
+                        <div class="captionText">Album: Cars</div>
+                    </div>
+                </div>
+                <div class="image_container">
+                    <div class="square modal2">
+                        <img src="s10.jpg" onclick="myFunction(this);">
+                        <div class="captionText">Album: Cars</div>
+                    </div>
+                </div>
+                <div class="image_container">
+                    <div class="square modal2">
+                        <img src="s11.jpg" onclick="myFunction(this);">
+                        <div class="captionText">Album: Cars</div>
+                    </div>
+                </div>
+                <div class="image_container">
+                    <div class="square modal2">
+                        <img src="s12.jpg" onclick="myFunction(this);">
+                        <div class="captionText">Album: Cars</div>
+                    </div>
+                </div>
+                <div class="image_container">
+                    <div class="square modal2">
+                        <img src="s13.jpg" onclick="myFunction(this);">
+                        <div class="captionText">Album: Cars</div>
+                    </div>
+                </div>
+                <div class="image_container">
+                    <div class="square modal2">
+                        <img src="s14.jpg" onclick="myFunction(this);">
+                        <div class="captionText">Album: Cars</div>
+                    </div>
+                </div>
+                <div class="image_container">
+                    <div class="square modal2">
+                        <img src="s15.jpg" onclick="myFunction(this);">
+                        <div class="captionText">Album: Cars</div>
+                    </div>
+                </div>
+                <div class="image_container">
+                    <div class="square modal2">
+                        <img src="s16.jpg" onclick="myFunction(this);">
+                        <div class="captionText">Album: Cars</div>
+                    </div>
+                </div>
+                <div class="image_container">
+                    <div class="square modal2">
+                        <img src="s17.jpg" onclick="myFunction(this);">
+                        <div class="captionText">Album: Cars</div>
+                    </div>
+                </div>
+                <div class="image_container">
+                    <div class="square modal2">
+                        <img src="s18.jpg" onclick="myFunction(this);">
+                        <div class="captionText">Album: Cars</div>
+                    </div>
+                </div>
+                <div class="image_container">
+                    <div class="square modal2">
+                        <img src="s19.jpg" onclick="myFunction(this);">
+                        <div class="captionText">Album: Cars</div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Close the image -->
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+                <a class="prevModal" onclick="plusModal(-1)">❮</a>
+                <a class="nextModal" onclick="plusModal(1)">❯</a>
+            
+                <!-- Modal Content (The Image) -->
+                 
+                <img class="modal-content" id="expandedImg">
+
+            </div>
+
+        </div>
+
+        <footer>
+            <a href="https://github.com/AlexPangProjects"><img class='footlogo' src="github.png"></a><a href="https://www.linkedin.com/in/alex-pang-4524b5289/"><img class='footlogo' src="linkedin.png"></a>
+        </footer>
+        <script src="scenery.js"></script>
+    </div>
+</body>
+</html>
