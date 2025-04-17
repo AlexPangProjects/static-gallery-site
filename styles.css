@@ -315,3 +315,35 @@ footer {
 
 
 }
+
+  
+.profile_image {
+    display: flex;
+    flex-direction: column; /* Stack image & caption */
+    align-items: center; /* Center both horizontally */
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.profile_image img{
+    width: 200px;
+    height: 200px;
+
+}
+
+.main{
+    text-align: center;
+    margin-left:20% ;
+    margin-right:20%;
+    text-wrap: wrap;
+    overflow-wrap: anywhere;
+}
+
+.contactlink:link{
+    color:white;
+}
+
+.contactlink:visited{
+    color:rgb(153, 153, 153);
+}
